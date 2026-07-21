@@ -1,0 +1,6 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Eco Consulting Icon -->
+  <circle cx="40" cy="40" r="25" fill="none" stroke="#FFB800" stroke-width="2"/>
+  <path d="M40 20 Q50 30 50 40 Q50 50 40 55 Q30 50 30 40 Q30 30 40 20" fill="#FFB800" opacity="0.7"/>
+  <path d="M40 25 Q45 30 45 40 Q45 48 40 52 Q35 48 35 40 Q35 30 40 25" fill="#FFB800"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Residential Icon -->
+  <rect x="10" y="25" width="60" height="40" fill="none" stroke="#FFB800" stroke-width="2"/>
+  <polygon points="40,10 70,25 70,65 10,65 10,25" fill="none" stroke="#FFB800" stroke-width="2"/>
+  <rect x="20" y="35" width="12" height="12" fill="#FFB800"/>
+  <rect x="38" y="35" width="12" height="12" fill="#FFB800"/>
+  <rect x="56" y="35" width="12" height="12" fill="#FFB800"/>
+</svg>

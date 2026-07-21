@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- User Avatar 3 - Amit -->
+  <circle cx="32" cy="32" r="32" fill="#0891b2"/>
+  <circle cx="32" cy="20" r="8" fill="#FFB800"/>
+  <path d="M20 40 Q20 32 32 32 Q44 32 44 40 L44 50 Q44 56 32 56 Q20 56 20 50 Z" fill="#FFB800"/>
+</svg>
