@@ -12,7 +12,7 @@ export default function Header({ onContactClick }: { onContactClick: () => void 
       <div className="container flex justify-between items-center h-20">
         {/* Logo */}
         <Link href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <Image src="/images/logo.svg" alt="NovaRays" width={180} height={60} priority />
+          <Image src="/images/logo.png" alt="NovaRays" width={180} height={60} priority />
         </Link>
 
         {/* Desktop Navigation */}
