@@ -12,10 +12,10 @@ export default function Footer() {
             <Image 
               src="/images/logo.png" 
               alt="NovaRays" 
-              width={200} 
-              height={80} 
+              width={140} 
+              height={56} 
               className="mb-4" 
-              style={{ width: 'auto', height: '50px' }}
+              style={{ width: 'auto', height: '35px' }}
             />
             <p className="text-gray-400 text-sm">Premium solar energy solutions for a sustainable future.</p>
           </div>

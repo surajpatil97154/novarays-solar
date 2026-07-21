@@ -15,10 +15,10 @@ export default function Header({ onContactClick }: { onContactClick: () => void 
           <Image 
             src="/images/logo.png" 
             alt="NovaRays" 
-            width={200} 
-            height={80} 
+            width={160} 
+            height={64} 
             priority
-            style={{ width: 'auto', height: '60px' }}
+            style={{ width: 'auto', height: '45px' }}
           />
         </Link>
 
