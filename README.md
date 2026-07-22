@@ -58,6 +58,34 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Consultation database (Supabase)
+
+The consultation API saves each request to Supabase PostgreSQL. To configure it:
+
+1. Create a Supabase project and open its SQL Editor.
+2. Run [`supabase/migrations/20260722_create_consultations.sql`](supabase/migrations/20260722_create_consultations.sql).
+3. Copy `.env.example` to `.env.local`.
+4. In Supabase **Project Settings → API**, copy the project URL and the `service_role` key into `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`.
+5. Restart the development server. For Vercel, add the same variables in the project's Environment Variables settings.
+
+The service-role key is server-only: do not expose it in browser code or use a `NEXT_PUBLIC_` prefix.
+
+### New-lead email notification (Resend)
+
+After a consultation is saved, the server sends the sales team an email with its details. To activate it:
+
+1. Create a [Resend](https://resend.com) account and verify a sender domain.
+2. Create an API key with permission to send email.
+3. Add the following variables to `.env.local` (and Vercel before deployment):
+
+   ```env
+   RESEND_API_KEY=re_your-resend-api-key
+   RESEND_FROM_EMAIL=NovaRays Leads <leads@yourdomain.com>
+   NOTIFICATION_EMAIL_TO=sales@yourdomain.com
+   ```
+
+`NOTIFICATION_EMAIL_TO` is the team inbox that receives new leads. The lead is saved even if the notification provider is temporarily unavailable, preventing lost enquiries.
+
 ### Production Build
 
 ```bash

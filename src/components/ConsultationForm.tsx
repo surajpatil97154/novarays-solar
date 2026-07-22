@@ -12,11 +12,32 @@ export default function ConsultationForm() {
     monthlyBill: '₹1500 - ₹2500',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    setError('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/consultations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Unable to submit your request. Please try again.')
+      }
+
+      setSubmitted(true)
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : 'Unable to submit your request. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -52,6 +73,11 @@ export default function ConsultationForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {error && (
+            <p role="alert" className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+              {error}
+            </p>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Full Name</label>
@@ -133,9 +159,10 @@ export default function ConsultationForm() {
 
           <button
             type="submit"
+            disabled={isSubmitting}
             className="w-full btn-primary font-bold py-3.5 rounded-lg text-base shadow-lg hover:shadow-xl transition-all duration-200 mt-2"
           >
-            Submit Consultation Request
+            {isSubmitting ? 'Submitting…' : 'Submit Consultation Request'}
           </button>
 
           <p className="text-xs text-gray-500 text-center mt-2">
