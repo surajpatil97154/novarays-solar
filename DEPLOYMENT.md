@@ -59,7 +59,7 @@ Follow the prompts:
 
 ### Step 4: Get Your Live URL
 
-After deployment, you'll see:
+After deployment, you'll see your live URL:
 ```
 ✓ Deployed to https://novarays-solar.vercel.app
 ```
@@ -77,7 +77,7 @@ If you need environment variables later:
 
 ## Custom Domain (Optional)
 
-To use a custom domain like `novarays.com`:
+To add a custom domain later (e.g. `novarays-solar.com` or `novarays-solar.in`):
 
 1. Dashboard → Settings → Domains
 2. Enter your domain name

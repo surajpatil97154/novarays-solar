@@ -1,30 +1,32 @@
 'use client'
 
-import { useState } from 'react'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import WhyUs from '@/components/WhyUs'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
-import ContactModal from '@/components/ContactModal'
 
 export default function Home() {
-  const [showContactModal, setShowContactModal] = useState(false)
+  const scrollToForm = () => {
+    const el = document.getElementById('consultation-form')
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
-      <Header onContactClick={() => setShowContactModal(true)} />
+      <Header onContactClick={scrollToForm} />
       <main>
-        <Hero onGetQuote={() => setShowContactModal(true)} />
+        <Hero />
+        <WhyUs />
         <Services />
         <Testimonials />
-        <CTASection onGetQuote={() => setShowContactModal(true)} />
+        <CTASection onGetQuote={scrollToForm} />
       </main>
       <Footer />
-      {showContactModal && (
-        <ContactModal onClose={() => setShowContactModal(false)} />
-      )}
     </>
   )
 }

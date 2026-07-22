@@ -12,11 +12,11 @@ export default function Header({ onContactClick }: { onContactClick: () => void 
       <div className="container flex justify-between items-center h-20">
         {/* Logo */}
         <Link href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <Image 
-            src="/images/logo.png" 
-            alt="NovaRays" 
-            width={160} 
-            height={64} 
+          <Image
+            src="/images/logo.png"
+            alt="NovaRays"
+            width={160}
+            height={64}
             priority
             style={{ width: 'auto', height: '45px' }}
           />
@@ -35,7 +35,7 @@ export default function Header({ onContactClick }: { onContactClick: () => void 
           onClick={onContactClick}
           className="btn-primary text-sm"
         >
-          Get Free Quote
+          Book a FREE Solar Consultation
         </button>
 
         {/* Mobile Menu Button */}
@@ -54,7 +54,7 @@ export default function Header({ onContactClick }: { onContactClick: () => void 
           <Link href="#benefits" className="hover:text-primary">Why Us</Link>
           <Link href="#testimonials" className="hover:text-primary">Testimonials</Link>
           <Link href="#faq" className="hover:text-primary">FAQ</Link>
-          <button onClick={onContactClick} className="btn-primary w-full text-center">Get Quote</button>
+          <button onClick={onContactClick} className="btn-primary w-full text-center">Book a FREE Solar Consultation</button>
         </nav>
       )}
     </header>

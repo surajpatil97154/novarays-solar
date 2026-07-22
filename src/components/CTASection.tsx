@@ -7,7 +7,7 @@ export default function CTASection({ onGetQuote }: { onGetQuote: () => void }) {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute w-80 h-80 bg-white rounded-full -top-40 -right-40"></div>
       </div>
-      
+
       <div className="container relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold text-dark mb-6">
           Ready to Switch to Solar?
@@ -19,7 +19,7 @@ export default function CTASection({ onGetQuote }: { onGetQuote: () => void }) {
           onClick={onGetQuote}
           className="bg-dark hover:bg-slate-900 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
         >
-          Get Your Free Solar Audit Today
+          Book a FREE Solar Consultation
         </button>
       </div>
     </section>
